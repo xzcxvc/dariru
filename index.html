@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33cc2112db.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -33,7 +34,7 @@
     </div>
 
     <!-- About Section-->
-    <div class="about">
+    <div id="about">
         <div class="container ">
             <div class="row">
                 <div class="about-col-1">
@@ -44,10 +45,7 @@
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto soluta nisi numquam! Omnis
                         soluta veniam labore tempora, vel doloremque. Fugiat, quibusdam adipisci, voluptas quia dolor
-                        molestiae delectus nihil, vel debitis qui perspiciatis autem laudantium quisquam alias mollitia
-                        corrupti doloremque deserunt ipsa harum cupiditate aut. Corrupti fugiat enim nisi iure
-                        voluptatem culpa, corporis, dolorum et inventore ratione quod neque tenetur voluptate fugit
-                        iusto repellat id.
+                        molestiae delectus nihil.
                     </p>
                     <div class="tab-titles">
                         <p id="skillsLink" class="tab-link active-link" onclick="openTab('skillsTab')">Skills</p>
@@ -75,10 +73,10 @@
                                 Corporation</li>
                             <li><span>July 2016 - April 2017</span><br>Service Crew at Golden Arches Development
                                 Corporation</li>
-                            <li><span>June 2012 - December 2012</span><br>Sales Clerk at VICSAL Development Corporation
+                            <!-- <li><span>June 2012 - December 2012</span><br>Sales Clerk at VICSAL Development Corporation
                             </li>
                             <li><span>April 2011 - September 2011</span><br>Stock Clerk at ACE Hardware Philippines Inc.
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div id="educationTab" class="tab-content">
@@ -94,10 +92,31 @@
     </div>
     <!-- About Section-->
 
-    <div class="projects">
-        <div class="container"></div>
+    <!-- Projects Section-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-table" style="color: #6bcf6f;"></i>
+                    <h2>UI/UX Design</h2>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt animi blanditiis deserunt
+                        similique, esse libero quia cum officia! Voluptate, nostrum.</p>
+                    <a href="#">Learn more...</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code" style="color: #6bcf6f;"></i>
+                    <h2>Web/App Development</h2>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt animi blanditiis deserunt
+                        similique, esse libero quia cum officia! Voluptate, nostrum.</p>
+                    <a href="#">Learn more...</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="contact">
+    <!-- Projects Section-->
+
+    <div id="contact">
         <div class="container"></div>
     </div>
 </body>
@@ -105,6 +124,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
     </script>
+
 
 
 <script>
@@ -121,7 +141,31 @@
         }
 
         event.currentTarget.classList.add('active-link');
+        document.getElementById(tabName).classList.add('active-tab');
     }
+
+    // $(document).ready(function () {
+    //     var tabLinks = $('.tab-link');
+    //     var tabContents = $('.tab-content');
+
+    //     function openTab(tabName) {
+    //         tabLinks.removeClass('active-link');
+    //         tabContents.removeClass('active-tab');
+
+    //         var clickedTabLink = $('[data-tab="' + tabName + '"]');
+    //         var correspondingTabContent = $('#' + tabName);
+
+    //         clickedTabLink.addClass('active-link');
+    //         correspondingTabContent.addClass('active-tab');
+    //     }
+
+    //     tabLinks.on('click', function (event) {
+    //         var tabName = $(this).data('tab');
+    //         openTab(tabName);
+    //     });
+    // });
+
+
 </script>
 
 </html>
