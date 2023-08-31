@@ -47,22 +47,20 @@
                         molestiae delectus nihil, vel debitis qui perspiciatis autem laudantium quisquam alias mollitia
                         corrupti doloremque deserunt ipsa harum cupiditate aut. Corrupti fugiat enim nisi iure
                         voluptatem culpa, corporis, dolorum et inventore ratione quod neque tenetur voluptate fugit
-                        iusto repellat id? Exercitationem unde perferendis alias quam asperiores dolore dolorem repellat
-                        dolorum laborum eius quidem accusantium labore non officiis at commodi cumque voluptatibus sunt
-                        distinctio, cum culpa nihil. Id ipsum praesentium sit impedit dolor maiores, a officiis quasi.
+                        iusto repellat id.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p id="skillsLink" class="tab-link active-link" onclick="openTab('skillsTab')">Skills</p>
+                        <p id="experienceLink" class="tab-link" onclick="openTab('experienceTab')">Experience</p>
+                        <p id="educationLink" class="tab-link" onclick="openTab('educationTab')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab">
+                    <div id="skillsTab" class="tab-content active-tab">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
                             <li><span>Web Development</span><br>Developing Web Applications</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div id="experienceTab" class="tab-content">
                         <ul>
                             <li><span>March 2023 - Current</span><br>Web Developer (UI/UX) at Boss Cargo Express Freight
                                 Inc.</li>
@@ -83,7 +81,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div id="educationTab" class="tab-content">
                         <ul>
                             <li><span>June 2014 - June 2018</span><br>Bachelor of Science in Information Technology at
                                 Pamantasan
@@ -106,13 +104,24 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
-</script>
+    </script>
 
 
 <script>
-    $(document).on('click', '.active-link', function () {
-       
-    })
+    var tabLinks = document.getElementsByClassName('tab-link');
+    var tabContents = document.getElementsByClassName('tab-content');
+
+    function openTab(tabName) {
+        for (tabLink of tabLinks) {
+            tabLink.classList.remove('active-link');
+        }
+
+        for (tabContent of tabContents) {
+            tabContent.classList.remove('active-tab');
+        }
+
+        event.currentTarget.classList.add('active-link');
+    }
 </script>
 
 </html>

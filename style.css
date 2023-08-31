@@ -30,6 +30,7 @@ p {
 .logo {
     height: 50px;
     width: 200px;
+    cursor: pointer;
 }
 
 nav {
@@ -121,7 +122,7 @@ nav ul li a:hover::after {
     margin: 20px 0 40px;
 }
 
-.tab-links {
+.tab-link {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -129,7 +130,7 @@ nav ul li a:hover::after {
     position: relative;
 }
 
-.tab-links::after {
+.tab-link::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -141,29 +142,29 @@ nav ul li a:hover::after {
     transition: .5s;
 }
 
-.tab-links:hover::after {
+.tab-link:hover::after {
     width: 100%;
 }
 
-.tab-links.active-link::after {
+.tab-link.active-link::after {
     width: 50%;
 }
 
-.tab-contents ul li {
+.tab-content ul li {
     list-style: none;
     margin: 10px 0;
 }
 
-.tab-contents ul li span {
+.tab-content ul li span {
     color: #6BCF6F;
     font-size: 14px;
 }
 
-.tab-contents{
+.tab-content{
     display: none;
 }
 
-.tab-contents.active-tab{
+.tab-content.active-tab{
     display: block;
 }
 
