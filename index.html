@@ -203,9 +203,10 @@
         </div>
     </div>
     <!-- Footer Section-->
-    
+
 </body>
-<button type="button" class="back-to-top"><i class="fa-sharp fa-solid fa-arrow-up fa-beat"></i></button>
+<button id="btnScrollToTop" type="button" class="back-to-top"><i
+        class="fa-sharp fa-solid fa-arrow-up fa-beat"></i></button>
 
 <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
@@ -228,6 +229,23 @@
             $('#' + $(this).data('tab')).addClass('active-tab');
         });
         // tab links function
+
+
+        // scroll to top
+        const btnScrollToTop = document.getElementById('btnScrollToTop');
+        $(window).on('scroll', function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btnScrollToTop.style.display = 'block';
+            } else {
+                btnScrollToTop.style.display = 'none';
+            }
+        })
+
+        $(document).on('click', '#btnScrollToTop', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        })
+        // scroll to top
     });
 </script>
 
