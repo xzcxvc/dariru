@@ -328,3 +328,20 @@ nav ul li a:hover::after {
     width: 100px;
 }
 /* Contact Me Section */
+
+
+/* Under Construction Page */
+#under-construction {
+    height: 100vh;
+    width: 100%;
+    background: #FAFCFF;
+    background-image: url(images/under-construction.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.back-to-main {
+    color: #08AE0F
+}
+/* Under Construction Page */
