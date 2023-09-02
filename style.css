@@ -302,6 +302,7 @@ nav ul li a:hover::after {
 .btn:hover {
     background: #6BCF6F;
 }
+
 /* Projects Section */
 
 /* Contact Me Section */
@@ -309,12 +310,21 @@ nav ul li a:hover::after {
     padding: 50px 0;
 }
 
+
+#contact .sub-title {
+    padding-bottom: 35px;
+}
+
 .contact-col-1 {
-    flex-basis: 30%;
+    flex-basis: 45%;
 }
 
 .contact-col-2 {
-    flex-basis: 65%;
+    flex-basis: 55%;
+}
+
+.contact-col-2 .socmed-icon {
+    height: 100px;
+    width: 100px;
 }
 /* Contact Me Section */
-
