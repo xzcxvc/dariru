@@ -14,7 +14,9 @@ p {
     line-height: 1.5lh;
 }
 
+/* Header Section */
 #header {
+    margin-bottom: 50px;
     width: 100%;
     height: 100vh;
     background-image: url(images/background.png);
@@ -85,11 +87,9 @@ nav ul li a:hover::after {
     font-size: 50px;
 }
 
-/* About Section */
-#about {
-    padding: 50px 0;
-}
+/* Header Section */
 
+/* About Section */
 .row {
     display: flex;
     justify-content: space-between;
@@ -148,31 +148,27 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.tab-content ul li {
+.sliding-tab-content ul li {
     list-style: none;
     margin: 10px 0;
 }
 
-.tab-content ul li span {
+.sliding-tab-content ul li span {
     color: #6BCF6F;
     font-size: 14px;
 }
 
-.tab-content {
+.sliding-tab-content {
     display: none;
 }
 
-.tab-content.active-tab {
+.sliding-tab-content.active-tab {
     display: block;
 }
 
 /* About Section */
 
 /* services Section */
-#services {
-    padding: 50px 0;
-}
-
 .services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -217,10 +213,6 @@ nav ul li a:hover::after {
 /* services Section */
 
 /* Projects Section */
-#projects {
-    padding: 50px 0;
-}
-
 .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -306,11 +298,6 @@ nav ul li a:hover::after {
 /* Projects Section */
 
 /* Contact Me Section */
-#contact {
-    padding: 50px 0;
-}
-
-
 #contact .sub-title {
     padding-bottom: 35px;
 }
@@ -327,8 +314,100 @@ nav ul li a:hover::after {
     height: 100px;
     width: 100px;
 }
+
+.contact-field {
+    background-color: #262626;
+    border: 2px solid #262626;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+    height: 50px;
+    padding: 0 10px;
+    width: 500px;
+    caret-color: #6BCF6F;
+    color: #FAFCFF;
+}
+
+#contact textarea {
+    padding: 10px;
+    resize: none;
+    height: 6rem;
+}
+
+.contact-field:focus {
+    border: 2px solid #08AE0F;
+}
+
+.send-button {
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 18px;
+    width: 500px;
+    border-radius: 10px;
+    color: #FAFCFF;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #08AE0F;
+
+}
+
 /* Contact Me Section */
 
+/* Footer Section */
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer ul li a {
+    font-size: 12px;
+}
+
+#footer ul li a::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    background-color: #08AE0F;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+#footer ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-dariru {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    color: #08AE0F;
+    font-weight: 400;
+}
+
+.back-to-top {
+    position: fixed;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 0;
+    border-radius: 50px;
+    bottom: 3%;
+    right: 3%;
+    font-size: 30px;
+    color: #d8e2d9;
+    background-color: #08AE0F;
+    cursor: pointer;
+}
+
+/* Footer Section */
 
 /* Under Construction Page */
 #under-construction {
@@ -344,4 +423,5 @@ nav ul li a:hover::after {
 .back-to-main {
     color: #08AE0F
 }
+
 /* Under Construction Page */

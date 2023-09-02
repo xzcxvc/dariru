@@ -12,10 +12,11 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/33cc2112db.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
+    <!-- Header Section-->
     <div id="header">
         <div class="container">
             <nav>
@@ -34,6 +35,7 @@
             </div>
         </div>
     </div>
+    <!-- Header Section-->
 
     <!-- About Section-->
     <div id="about">
@@ -50,19 +52,19 @@
                         molestiae delectus nihil.
                     </p>
                     <div class="tab-titles">
-                        <p id="skillsLink" class="tab-link active-link" onclick="openTab('skillsTab')">Skills</p>
-                        <p id="experienceLink" class="tab-link" onclick="openTab('experienceTab')">Experience</p>
-                        <p id="educationLink" class="tab-link" onclick="openTab('educationTab')">Education</p>
+                        <p data-tab="skillsTab" id="skillsLink" class="tab-link active-link">Skills</p>
+                        <p data-tab="experienceTab" id="experienceLink" class="tab-link">Experience</p>
+                        <p data-tab="educationTab" id="educationLink" class="tab-link">Education</p>
                     </div>
-                    <div id="skillsTab" class="tab-content active-tab">
+                    <div id="skillsTab" class="sliding-tab-content active-tab">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
                             <li><span>Web Development</span><br>Developing Web Applications</li>
                         </ul>
                     </div>
-                    <div id="experienceTab" class="tab-content">
+                    <div id="experienceTab" class="sliding-tab-content">
                         <ul>
-                            <li><span>March 2023 - Current</span><br>Web Developer (UI/UX) at Boss Cargo Express Freight
+                            <li><span>March 2023 - Current</span><br>Web Developer at Boss Cargo Express Freight
                                 Inc.</li>
                             <li><span>November 2019 - March 2023</span><br>Applications Group Specialist at Green Cross
                                 Inc.</li>
@@ -79,7 +81,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="educationTab" class="tab-content">
+                    <div id="educationTab" class="sliding-tab-content">
                         <ul>
                             <li><span>June 2014 - June 2018</span><br>Bachelor of Science in Information Technology at
                                 Pamantasan
@@ -157,18 +159,23 @@
             <h1 class="sub-title">Contact Me</h1>
             <div class="row">
                 <div class="contact-col-1">
-                    <h2>Send me a message</h2>
-                    <div class="form-group col-lg-4 offset-lg-8">
-                        <input type="number" step="any" class="form-control text-right" id="txtAmountTotal"
-                            name="txtAmountTotal" placeholder="AMOUNT TOTAL:" value="0.00" min="0" readonly>
-                        <label class="focus-label" for="txtAmountTotal">AMOUNT TOTAL:</label>
-                    </div>
+                    <h2>Leave a message</h2>
+                    <input class="contact-field" type="text" id="txtCompleteName" name="txtCompleteName"
+                        placeholder="Complete name">
+                    <input class="contact-field" type="email" id="txtEmailAddress" name="txtEmailAddress"
+                        placeholder="Email Address">
+                    <textarea class="contact-field" id="txtVisitorMessage" name="txtVisitorMessage"
+                        placeholder="Type your message here!"></textarea>
+                    <button type="button" class="send-button">SEND MESSAGE</button>
                 </div>
                 <div class="contact-col-2">
                     <h2>My Social Media</h2>
-                    <a href="https://github.com/xzcxvc"><img class="socmed-icon" src="images/github-icon.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/dariru/"><img class="socmed-icon" src="images/linkedin-icon.png" alt=""></a>
-                    <a href="https://www.facebook.com/da.tiamps"><img class="socmed-icon" src="images/facebook-icon.png" alt=""></a>
+                    <a href="https://github.com/xzcxvc"><img class="socmed-icon" src="images/github-icon.png"
+                            alt=""></a>
+                    <a href="https://www.linkedin.com/in/dariru/"><img class="socmed-icon"
+                            src="images/linkedin-icon.png" alt=""></a>
+                    <a href="https://www.facebook.com/da.tiamps"><img class="socmed-icon" src="images/facebook-icon.png"
+                            alt=""></a>
                     <a href=""><img class="socmed-icon" src="images/slack-icon.png" alt=""></a>
                     <a href=""><img class="socmed-icon" src="images/gmail-icon.png" alt=""></a>
                     <a href=""><img class="socmed-icon" src="images/viber-icon.png" alt=""></a>
@@ -177,51 +184,51 @@
         </div>
     </div>
     <!-- Contact me Section-->
-</body>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    <!-- Footer Section-->
+    <div id="footer">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="under-construction.html">About</a></li>
+                    <li><a href="under-construction.html">Services</a></li>
+                    <li><a href="under-construction.html">Projects</a></li>
+                    <li><a href="under-construction.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer-dariru">
+                <p>Dariru est., 2023</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section-->
+    
+</body>
+<button type="button" class="back-to-top"><i class="fa-sharp fa-solid fa-arrow-up fa-beat"></i></button>
+
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
-    </script>
+    </script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
 <script>
-    var tabLinks = document.getElementsByClassName('tab-link');
-    var tabContents = document.getElementsByClassName('tab-content');
+    $(document).ready(function () {
+        // tab links function
+        var tabLinks = $('.tab-link');
+        var tabContents = $('.sliding-tab-content');
 
-    function openTab(tabName) {
-        for (tabLink of tabLinks) {
-            tabLink.classList.remove('active-link');
-        }
+        tabLinks.on('click', function () {
+            tabLinks.removeClass('active-link');
+            tabContents.removeClass('active-tab');
 
-        for (tabContent of tabContents) {
-            tabContent.classList.remove('active-tab');
-        }
-
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabName).classList.add('active-tab');
-    }
-
-    // $(document).ready(function () {
-    //     var tabLinks = $('.tab-link');
-    //     var tabContents = $('.tab-content');
-
-    //     function openTab(tabName) {
-    //         tabLinks.removeClass('active-link');
-    //         tabContents.removeClass('active-tab');
-
-    //         var clickedTabLink = $('[data-tab="' + tabName + '"]');
-    //         var correspondingTabContent = $('#' + tabName);
-
-    //         clickedTabLink.addClass('active-link');
-    //         correspondingTabContent.addClass('active-tab');
-    //     }
-
-    //     tabLinks.on('click', function (event) {
-    //         var tabName = $(this).data('tab');
-    //         openTab(tabName);
-    //     });
-    // });
+            $(this).addClass('active-link');
+            $('#' + $(this).data('tab')).addClass('active-tab');
+        });
+        // tab links function
+    });
 </script>
 
 </html>
