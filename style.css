@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #080808;
     color: #fff;
@@ -405,6 +409,7 @@ nav ul li a:hover::after {
     color: #d8e2d9;
     background-color: #08AE0F;
     cursor: pointer;
+    display: none;
 }
 
 /* Footer Section */
