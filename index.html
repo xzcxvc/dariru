@@ -12,7 +12,13 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/33cc2112db.js" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+    " rel="stylesheet">
 </head>
 
 <body>
@@ -158,15 +164,18 @@
         <div class="container">
             <h1 class="sub-title">Contact Me</h1>
             <div class="row">
+
                 <div class="contact-col-1">
-                    <h2>Leave a message</h2>
-                    <input class="contact-field" type="text" id="txtCompleteName" name="txtCompleteName"
-                        placeholder="Complete name">
-                    <input class="contact-field" type="email" id="txtEmailAddress" name="txtEmailAddress"
-                        placeholder="Email Address">
-                    <textarea class="contact-field" id="txtVisitorMessage" name="txtVisitorMessage"
-                        placeholder="Type your message here!"></textarea>
-                    <button type="button" class="send-button">SEND MESSAGE</button>
+                    <form method="POST" id="gSheetsForm">
+                        <h2>Leave a message</h2>
+                        <input class="contact-field" type="text" id="" name="data[visitor_name]"
+                            placeholder="Complete name">
+                        <input class="contact-field" type="email" id="" name="data[visitor_email]"
+                            placeholder="Email Address">
+                        <textarea class="contact-field" type="text" id="" name="data[visitor_message]"
+                            placeholder="Type your message here!"></textarea>
+                        <button type="submit" class="send-button" id="btnSubmitMessage">SEND MESSAGE</button>
+                    </form>
                 </div>
                 <div class="contact-col-2">
                     <h2>My Social Media</h2>
@@ -204,16 +213,15 @@
     </div>
     <!-- Footer Section-->
 
+    <button id="btnScrollToTop" type="button" class="back-to-top"><i
+            class="fa-sharp fa-solid fa-arrow-up fa-beat"></i></button>
 </body>
-<button id="btnScrollToTop" type="button" class="back-to-top"><i
-        class="fa-sharp fa-solid fa-arrow-up fa-beat"></i></button>
 
-<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
-    </script> -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
     $(document).ready(function () {
@@ -246,6 +254,46 @@
             document.documentElement.scrollTop = 0;
         })
         // scroll to top
+
+
+        var form = $('#gSheetsForm');
+     
+        form.on('submit', function (e) {
+            var sheetUrl = "https://sheetdb.io/api/v1/zmpqj5e6oijp4";
+            e.preventDefault();
+            Swal.fire({
+                title: 'Do you want to submit your message?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Save',
+                denyButtonText: 'Cancel',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: sheetUrl,
+                        method: "POST",
+                        data: new FormData(this),
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                            if (response) {
+                                console.log(response);
+                                Swal.fire('Message sent!', '', 'success');
+                                $('#txtVisitorName').val('');
+                                $('#txtVisitorEmail').val('');
+                                $('#txtVisitorMessage').val('');
+                            } else {
+                                Swal.fire('Error sending message!', '', 'error')
+                            }
+                            // You can put any JS code here
+                        }
+                    });
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            })
+        });
     });
 </script>
 
