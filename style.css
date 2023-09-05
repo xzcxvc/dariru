@@ -430,3 +430,26 @@ nav ul li a:hover::after {
 }
 
 /* Under Construction Page */
+
+
+/* Mobile View Styles */
+@media only screen and (max-width: 700px){
+    #header{
+        background-image: url(images/background2.png);
+        background-size: cover;
+    }
+
+    .hero-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text h1 span{
+        font-size: 30px;
+    }
+}
+/* Mobile View Styles */
