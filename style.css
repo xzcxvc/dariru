@@ -429,7 +429,7 @@ nav ul li a:hover::after {
 /* Under Construction Page */
 
 nav .fas {
-    display: block;
+    display: none;
 }
 
 /* Small Screen CSS */
