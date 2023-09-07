@@ -100,6 +100,7 @@ nav ul li a:hover::after {
 
 .about-col-1 {
     flex-basis: 35%;
+    display: block;
 }
 
 .about-col-1 img {
@@ -109,6 +110,7 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
+    display: block;
 }
 
 .sub-title {
@@ -433,7 +435,11 @@ nav .fas {
 }
 
 /* Small Screen CSS */
-@media only screen and (max-width: 961px) {
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: #171717;
+    }
+
     #header {
         margin-bottom: 50px;
         width: 100%;
@@ -462,8 +468,8 @@ nav .fas {
     }
 
     #header nav ul {
-        background-color: #262626;
-        height: 100vh;
+        background-color: #171717;
+        height: 100%;
         width: 200px;
         position: fixed;
         top: 0;
@@ -486,10 +492,59 @@ nav .fas {
         padding: 10px;
     }
 
-    .about-col-1 img {
-        
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: -70%;
     }
 
-}
-/* Small Screen CSS */
+    .about-col-1 img {
+        min-width: 250px;
+    }
 
+    .about-col-2 {
+        position: relative;
+        left: 280px;
+        top: -340px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-col-2 p {
+        font-size: 14px;
+        margin-right: 20%;
+        margin-top: 20px;
+    }
+
+    .tab-titles {
+        align-items: center;
+        text-align: center;
+        position: relative;
+        right: 50%;
+        top: 20px;
+    }
+
+    .sliding-tab-content {
+        position: relative;
+        right: 50%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-col-2 {
+        margin-top: 50px;
+        position: relative;
+        align-items: left;
+        justify-content: center;
+        left: 30%;
+    }
+
+    #footer {
+        position: relative;
+        top: 300px;
+    }
+}
+
+/* Small Screen CSS */
