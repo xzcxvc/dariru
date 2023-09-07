@@ -429,7 +429,7 @@ nav ul li a:hover::after {
 /* Under Construction Page */
 
 nav .fas {
-    display: none;
+    display: block;
 }
 
 /* Small Screen CSS */
@@ -464,7 +464,7 @@ nav .fas {
     #header nav ul {
         background-color: #262626;
         height: 100vh;
-        width: 150px;
+        width: 200px;
         position: fixed;
         top: 0;
         right: -200px;
