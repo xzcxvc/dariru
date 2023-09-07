@@ -12,8 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/33cc2112db.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="
+    </script>
+    <script s <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" rc="
     https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
     "></script>
     <link href="
@@ -29,13 +29,16 @@
                 <img src="images/dariru3.png" class="logo" alt="">
                 <ul id="responsiveMenu">
                     <i class="fas fa-times" id="hideMenu"></i>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="under-construction.html">About</a></li>
-                    <li><a href="under-construction.html">Services</a></li>
-                    <li><a href="under-construction.html">Projects</a></li>
-                    <li><a href="under-construction.html">Contact</a></li>
-                </ul>
-                <i class="fas fa-bars" id="showMenu"></i>
+                    <img src="images/dariru.png" class="logo" alt="">
+                    <ul id="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="under-construction.html">About</a></li>
+                        <li><a href="under-construction.html">Services</a></li>
+                        <li><a href="under-construction.html">Projects</a></li>
+                        <li><a href="under-construction.html">Contact</a></li>
+                        <i class="fas fa-times" id="hideMenu"></i>
+                    </ul>
+                    <i class="fas fa-bars" id="showMenu"></i>
             </nav>
             <div class="header-text">
                 <p>Web Developer</p>
@@ -259,7 +262,7 @@
 
 
         var form = $('#gSheetsForm');
-     
+
         form.on('submit', function (e) {
             var sheetUrl = "https://sheetdb.io/api/v1/zmpqj5e6oijp4";
             e.preventDefault();
@@ -296,16 +299,27 @@
                 }
             })
         });
+
+        // toggle nav menu
+        var menu = document.getElementById('#menu');
+
+        $(document).on('click', '#showMenu', function () {
+            showMenu();
+        })
+
+        $(document).on('click', '#hideMenu', function () {
+            hideMenu();
+        })
     });
 
-    var responsiveMenu = document.getElementById('responsiveMenu');
-    $(document).on('click', '#showMenu', function() {
-        responsiveMenu.style.right = '0';
-        
-    })
-    $(document).on('click', '#hideMenu', function() {
-        responsiveMenu.style.right = '-200px';
-    })
+    function showMenu() {
+        menu.style.right = "0px";
+    }
+
+    function hideMenu() {
+        menu.style.right = "-200px";
+    }
+        // toggle nav menu
 </script>
 
 </html>

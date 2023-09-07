@@ -399,7 +399,6 @@ nav ul li a:hover::after {
     border: none;
     height: 50px;
     width: 50px;
-    z-index: 0;
     border-radius: 50px;
     bottom: 3%;
     right: 3%;
@@ -457,8 +456,9 @@ nav .fas {
         display: block;
         cursor: pointer;
     }
+
     #header nav .fas:hover {
-      color: #08AE0F;
+        color: #08AE0F;
     }
 
     #header nav ul {
@@ -475,7 +475,7 @@ nav .fas {
 
     .fa-times {
         position: relative;
-        top:60px;
+        top: 60px;
         left: 30px;
         padding: 20px 0;
     }
