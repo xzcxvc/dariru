@@ -22,18 +22,18 @@
             <nav>
                 <img src="images/dariru3.png" class="logo" alt="">
                 <ul id="responsiveMenu">
-                    <i class="fas fa-times" id="hideMenu"></i>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="under-construction.html">About</a></li>
                     <li><a href="under-construction.html">Services</a></li>
                     <li><a href="under-construction.html">Projects</a></li>
                     <li><a href="under-construction.html">Contact</a></li>
+                    <i class="fas fa-times" id="hideMenu"></i>
                 </ul>
                 <i class="fas fa-bars" id="showMenu"></i>
             </nav>
             <div class="header-text">
                 <p>Web Developer</p>
-                <h1>Hi, I'm <span>Daryl </span>Tiampong<br>from Santa Rosa</h1>
+                <h1>Hi, I'm <span>Daryl </span>Tiampong</h1>
             </div>
         </div>
     </div>
@@ -192,15 +192,13 @@
     <!-- Footer Section-->
     <div id="footer">
         <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="under-construction.html">About</a></li>
-                    <li><a href="under-construction.html">Services</a></li>
-                    <li><a href="under-construction.html">Projects</a></li>
-                    <li><a href="under-construction.html">Contact</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="under-construction.html">About</a></li>
+                <li><a href="under-construction.html">Services</a></li>
+                <li><a href="under-construction.html">Projects</a></li>
+                <li><a href="under-construction.html">Contact</a></li>
+            </ul>
             <div class="footer-dariru">
                 <p>Dariru est., 2023</p>
             </div>
@@ -295,10 +293,12 @@
 
         $(document).on('click', '#showMenu', function () {
             responsiveMenu.style.right = '0px';
+            // responsiveMenu.style.transition = '0.5s';
         })
 
         $(document).on('click', '#hideMenu', function () {
-            responsiveMenu.style.right = '-200px';
+            responsiveMenu.style.right = '-300px';
+            // responsiveMenu.style.transition = '0.5s';
         })
         // toggle nav menu
     });
