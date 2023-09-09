@@ -34,7 +34,8 @@ p {
 }
 
 .logo {
-    height: 80;
+    margin-top: 0px;
+    height: 80px;
     width: 350px;
     cursor: pointer;
 }
@@ -307,37 +308,42 @@ nav ul li a:hover::after {
 }
 
 .contact-col-1 {
-    flex-basis: 45%;
+    flex-basis: 40%;
 }
 
 .contact-col-2 {
-    flex-basis: 55%;
+    flex-basis: 45%;
 }
 
 .contact-col-2 .socmed-icon {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+}
+
+.socmed-icon:hover {
+    transform: translateX();
+}
+
+.contact-col-1 form {
+    width: 100%;
 }
 
 .contact-field {
-    background-color: #262626;
+    width: 100%;
     border: 2px solid #262626;
     outline: none;
+    background-color: #262626;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #6BCF6F;
+    border-radius: 6px;
     transition: 0.5s;
-    border-radius: 10px;
-    font-weight: 700;
-    margin-top: 20px;
-    height: 50px;
-    padding: 0 10px;
-    width: 500px;
-    caret-color: #6BCF6F;
-    color: #FAFCFF;
 }
 
-#contact textarea {
-    padding: 10px;
+form textarea {
     resize: none;
-    height: 6rem;
+    height: 8rem;
 }
 
 .contact-field:focus {
@@ -347,43 +353,31 @@ nav ul li a:hover::after {
 .send-button {
     margin-top: 10px;
     padding: 10px 10px;
-    font-size: 18px;
-    width: 500px;
-    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 6px;
     color: #FAFCFF;
     font-weight: 700;
     cursor: pointer;
     background-color: #08AE0F;
-
 }
-
 /* Contact Me Section */
 
 /* Footer Section */
-#footer {
+#footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+    
 }
 
 #footer ul li a {
-    font-size: 12px;
-}
-
-#footer ul li a::after {
-    content: '';
-    width: 0%;
-    height: 1px;
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    background-color: #08AE0F;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-#footer ul li a:hover::after {
-    width: 100%;
+    font-size: 14px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #ffff;
 }
 
 .footer-dariru {
@@ -430,37 +424,43 @@ nav ul li a:hover::after {
 
 /* Under Construction Page */
 
-nav .fas {
+#header nav .fas {
     display: none;
 }
 
 /* Small Screen CSS */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     body {
         background-color: #171717;
     }
 
+    .logo {
+        height: 50px;
+        width: 200px;
+        cursor: pointer;
+    }
+
     #header {
-        margin-bottom: 50px;
-        width: 100%;
-        height: 100vh;
         background-image: url(images/mobile-background.png);
-        background-size: contain;
-        background-position: center;
+        background-size:cover;
     }
 
     .header-text {
         margin-top: 100%;
+        font-size: 16px;
     }
 
     .header-text h1 {
-        font-size: 40px;
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 20px 10%;
     }
 
     #header nav .fas {
-        font-size: 30px;
         display: block;
-        cursor: pointer;
+        font-size: 25px;
     }
 
     #header nav .fas:hover {
@@ -469,82 +469,71 @@ nav .fas {
 
     #header nav ul {
         background-color: #171717;
-        height: 100%;
-        width: 200px;
         position: fixed;
         top: 0;
         right: -200px;
-        display: block;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
         z-index: 2;
-        transition: 0.5s;
-    }
-
-    .fa-times {
-        position: relative;
-        top: 60px;
-        left: 30px;
-        padding: 20px 0;
+        transition: right 0.5s;
     }
 
     #header nav ul li {
-        position: relative;
-        top: 50px;
-        padding: 10px;
+        display: block;
+        margin: 25px;
     }
 
-    .row {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-bottom: -70%;
+    #header nav ul .fas {
+        position: absolute;
+        top: 30px;
+        left: 25px;
     }
 
-    .about-col-1 img {
-        min-width: 250px;
+    .sub-title {
+        font-size: 30px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
     }
 
     .about-col-2 {
-        position: relative;
-        left: 280px;
-        top: -340px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .about-col-2 p {
         font-size: 14px;
-        margin-right: 20%;
-        margin-top: 20px;
     }
 
-    .tab-titles {
-        align-items: center;
-        text-align: center;
-        position: relative;
-        right: 50%;
-        top: 20px;
+    .tab-link {
+        font-size: 16px;
+        margin-right: 20px;
     }
 
-    .sliding-tab-content {
-        position: relative;
-        right: 50%;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+    .project img {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
     }
 
-    .contact-col-2 {
-        margin-top: 50px;
-        position: relative;
-        align-items: left;
-        justify-content: center;
-        left: 30%;
+
+    .contact-col-1, .contact-col-2 {
+        flex-basis: 100%;
     }
 
-    #footer {
-        position: relative;
-        top: 300px;
+    .send-button {
+       margin-bottom: 40px;
+    }
+    
+    #footer ul li a {
+        font-size: 10px;
+    }
+
+    #under-construction {
+        background-size: 150%;
     }
 }
-
 /* Small Screen CSS */
